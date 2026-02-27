@@ -1,0 +1,5 @@
+*.pem
+*.key
+.env
+parspect.pem
+parspec.pem
