@@ -17,6 +17,7 @@ Block the SQL Injection attack
 Provide deployment links and documentation
 
 2. Environment Setup
+   
 2.1 Infrastructure
 
 Cloud Provider: AWS
@@ -34,13 +35,16 @@ Open Ports:
 80 (HTTP)
 
 2.2 Software Installed
+
 Component	Purpose
 Apache2	Web Server
 PHP	Backend scripting
 MySQL	Database
 ModSecurity	Web Application Firewall
 OWASP CRS	Security rule set
+
 3. Step-by-Step Implementation
+   
 Step 1: Launch EC2 Instance
 
 An Ubuntu 24.04 EC2 instance was launched with HTTP (Port 80) enabled to host the web application.
@@ -71,6 +75,7 @@ ModSecurity provides WAF capability.
 Apache service was verified:
 
 sudo systemctl status apache2
+
 Step 3: Database Configuration
 
 MySQL database was configured:
@@ -125,6 +130,7 @@ Since 1=1 is always true, the condition succeeds and bypasses authentication.
 Deployed link:
 
 http://13.235.9.139/page1.php
+
 Step 6: Install and Enable ModSecurity
 
 ModSecurity module was enabled:
@@ -165,6 +171,7 @@ Same vulnerable code was used intentionally to demonstrate WAF protection.
 Deployed link:
 
 http://13.235.9.139/page2.php
+
 Step 9: SQL Injection on Protected Page
 
 Payload used:
